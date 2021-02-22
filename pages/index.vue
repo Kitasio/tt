@@ -35,8 +35,8 @@
   <div>
     <v-img
       class="mt-8"
-      lazy-src="/img/Soldierback1.jpg?nf_resize=fit&w=2000"
-      src="/img/Soldierback1.jpg"
+      lazy-src="/img/Soldierback1.jpg?nf_resize=fit&w=1500"
+      src="/img/Soldierback1.jpg?nf_resize=fit&w=3000"
     >
     <template v-slot:placeholder>
         <v-row
