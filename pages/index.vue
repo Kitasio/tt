@@ -32,26 +32,7 @@
      </v-row>
    </v-container>
 
-  <div>
-    <v-img
-      class="mt-8"
-      lazy-src="/img/Soldierback1.jpg?nf_resize=fit&w=1500"
-      src="/img/Soldierback1.jpg?nf_resize=fit&w=3000"
-    >
-    <template v-slot:placeholder>
-        <v-row
-          class="fill-height ma-0"
-          align="center"
-          justify="center"
-        >
-          <v-progress-circular
-            indeterminate
-            color="grey lighten-5"
-          ></v-progress-circular>
-        </v-row>
-      </template>
-    </v-img>
-  </div>
+  <Pic src="/img/Soldierback1.jpg?nf_resize=fit&w=3000" lazy-src="/img/Soldierback1.jpg?nf_resize=fit&w=500" />
 
   </div>
 
@@ -62,9 +43,10 @@
 import Navbar from '~/components/Navbar.vue'
 import TTlogo from '~/components/TTlogo.vue'
 import SideLinks from '~/components/SideLinks.vue'
+import Pic from '~/components/Pic.vue'
 
 export default {
-  components: { Navbar, TTlogo, SideLinks },
+  components: { Navbar, TTlogo, SideLinks, Pic },
   data() {
     return {
       dialog: false
