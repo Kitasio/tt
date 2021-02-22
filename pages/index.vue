@@ -32,11 +32,27 @@
      </v-row>
    </v-container>
 
-   <v-img
-    class="mt-8"
-    lazy-src="/img/Soldierback1.jpg"
-    src="/img/Soldierback1.jpg?nf_resize=fit&w=2000"
-   ></v-img>
+  <div>
+    <v-img
+      class="mt-8"
+      lazy-src="/img/Soldierback1.jpg?nf_resize=fit&w=2000"
+      src="/img/Soldierback1.jpg"
+    >
+    <template v-slot:placeholder>
+        <v-row
+          class="fill-height ma-0"
+          align="center"
+          justify="center"
+        >
+          <v-progress-circular
+            indeterminate
+            color="grey lighten-5"
+          ></v-progress-circular>
+        </v-row>
+      </template>
+    </v-img>
+  </div>
+
   </div>
 
 </v-main>
