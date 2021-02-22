@@ -35,7 +35,7 @@
    <v-img
     class="mt-8"
     lazy-src="/img/Soldierback1.jpg"
-    src="/img/Soldierback1.jpg"
+    src="/img/Soldierback1.jpg?nf_resize=fit&w=2000"
    ></v-img>
   </div>
 
