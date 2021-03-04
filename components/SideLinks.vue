@@ -1,8 +1,8 @@
-<template>
-<div id="icons">
-  <v-card tile flat v-for="icon in icons" :key="icon.name">
-    <img v-if="$vuetify.theme.dark" :src="icon.src_dark" :alt="icon.name">
-    <img v-else :src="icon.src" :alt="icon.name">
+<template> 
+ <div id="icons">
+  <v-card tile flat v-for="icon in icons" :key="icon.name" :style="icon.width">
+    <a v-if="$vuetify.theme.dark" :href="icon.url"><img :src="icon.src_dark" :alt="icon.name"></a>
+    <a v-else :href="icon.url"><img :src="icon.src" :alt="icon.name" ></a>
   </v-card>
 </div>
 </template>
@@ -12,9 +12,9 @@ export default {
     data() {
         return {
             icons: [
-                {name: 'tg', src: '/img/tg.svg', src_dark: '/img/tg_white.svg'},
-                {name: 'behance', src: '/img/beh.svg', src_dark: '/img/beh_white.svg'},
-                {name: 'instagram', src: '/img/ins.svg', src_dark: '/img/ins_white.svg'},
+                {name: 'tg', src: '/img/tg.svg', src_dark: '/img/tg_white.svg', width: 'width: 30px;', url: '#'},
+                {name: 'behance', src: '/img/beh.svg', src_dark: '/img/beh_white.svg', width: 'width: 43px;', url: 'https://www.behance.net/TwentyTwos'},
+                {name: 'instagram', src: '/img/ins.svg', src_dark: '/img/ins_white.svg', url: 'https://www.instagram.com/20_twos/?igshid=15n3ozy3avcw'},
             ]
         }
     },

@@ -4,7 +4,33 @@ $color3: #E6E6D9;
 $color4: #E6E6CC;
 $color5: #240400;
 
+@mixin main-grid {
+    display: grid;
+    grid-template-columns: 1fr 7% 7% 1fr;
+
+    @media screen and (min-width: 960px) {
+        margin: 0 13%;
+    }
+}
+
+@mixin left-child {    
+    grid-column: 1/5;
+    @media screen and (min-width: 960px) {
+        grid-column: 1/3;
+    }
+}
+@mixin right-child {    
+    grid-column: 1/5;
+    @media screen and (min-width: 960px) {
+        grid-column: 3/5;
+    }
+}
+
 @mixin text-heading {
     text-transform: uppercase;
     font-size: 2rem;
+}
+
+.grid {
+    @include main-grid;
 }

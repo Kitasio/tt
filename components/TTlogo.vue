@@ -3,6 +3,11 @@
     <img v-if="$vuetify.theme.dark" src="/img/logo_white.svg" alt="">
     <img v-else src="/img/logo.svg" alt="">
 </div>
+<!-- <div>
+    <div>
+        <p>twenty twos <span>art&design agency</span></p>
+    </div>
+</div> -->
 </template>
 
 <script>

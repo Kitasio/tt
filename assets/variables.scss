@@ -2,6 +2,9 @@
 //
 // The variables you want to modify
 // $font-size-root: 20px;
+$body-font-family: 'Helvetica', sans-serif !default;
+$title-font: 'Helvetica', sans-serif !default;
+
 $material-dark: (
   'background': #000,
   'cards': #000
@@ -14,5 +17,4 @@ $material-light: (
       'focused': '#ffffff'
   )
 );
-$body-font-family: 'Helvetica', sans-serif !default;
-$title-font: 'Helvetica', sans-serif !default;
+$dialog-border-radius: 0px;
