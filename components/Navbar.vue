@@ -1,5 +1,5 @@
 <template>
-<v-card flat tile class="d-flex justify-space-between px-md-5 text-md-h5 text-xl-h4">
+<v-card flat tile class="d-flex justify-space-between mt-3 px-md-5 text-md-h5 text-xl-h4">
     <v-card @mouseenter="borderAnim1" id="links" flat tile class="font-weight-light text-uppercase">portfolio
         <div class="navs1 line info"></div>
     </v-card>

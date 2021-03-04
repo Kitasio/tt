@@ -7,25 +7,59 @@
     >
       <v-card>
         <v-card-title>
-          <span class="headline">User Profile</span>
+          <span class="text-h2 font-weight-bold">CONTACT US</span>
         </v-card-title>
         <v-card-text>
           <v-container>
             <v-row>
-              <v-col cols="12">
+              <v-col cols="12" class="pa-0">
                 <v-text-field
-                  label="Email*"
+                  label="NAME*"
                   color="shade white"
                   required
                 ></v-text-field>
               </v-col>
-              <v-col cols="12">
+              <v-col cols="12" class="pa-0">
                 <v-text-field
-                  label="Password*"
-                  type="password"
+                  label="PHONE NUMBER*"
                   color="shade white"
                   required
                 ></v-text-field>
+              </v-col>
+              <v-col cols="12" class="pa-0">
+                <v-text-field
+                  label="EMAIL*"
+                  color="shade white"
+                  required
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12" class="pa-0">
+                <v-textarea
+                  label="TELL US ABOUT YOUR COMPANY"
+                  color="shade white"
+                  rows="1"
+                ></v-textarea>
+              </v-col>
+              <v-col cols="12" class="pa-0">
+                <v-textarea
+                  label="DESCRIBE YOUR REQUEST"
+                  color="shade white"
+                  rows="1"
+                ></v-textarea>
+              </v-col>
+              <v-col cols="12" class="pa-0">
+                <v-textarea
+                  label="APPROXIMATE BUDGET"
+                  color="shade white"
+                  rows="1"
+                ></v-textarea>
+              </v-col>
+              <v-col cols="12" class="pa-0">
+                <v-textarea
+                  label="APPROXIMATE DATES"
+                  color="shade white"
+                  rows="1"
+                ></v-textarea>
               </v-col>
             </v-row>
           </v-container>
@@ -33,18 +67,22 @@
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn
-            color="primary"
+            color="shade white"
             text
+            outlined
+            tile
             @click="closeModal"
           >
-            Close
+            CLOSE
           </v-btn>
           <v-btn
-            color="blue darken-1"
+            color="shade white"
             text
+            outlined
+            tile
             @click="closeModal"
           >
-            Save
+            SEND
           </v-btn>
         </v-card-actions>
       </v-card>
