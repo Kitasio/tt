@@ -1,10 +1,21 @@
 <template>
   <v-row justify="center">
     <v-dialog
-      v-model="showModal"
-      persistent
-      max-width="95%"
+      v-model="dialog"
+      max-width="90%"
     >
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          text
+          v-bind="attrs"
+          v-on="on"
+          id="options"
+          class="text-subtitle-2 text-sm-h6 font-weight-light"
+          color="shade white"
+        >
+        SEND REQUEST
+        </v-btn>
+      </template>
       <v-card>
         <v-card-title class="d-flex justify-space-between">
           <span class="text-h5 text-sm-h2 font-weight-bold">CONTACT</span>
@@ -73,7 +84,7 @@
                   text
                   outlined
                   tile
-                  @click="closeModal"
+                  @click="dialog = false"
                 >
                   SEND
                 </v-btn>
@@ -106,5 +117,14 @@ export default {
 <style lang="scss" scoped>
 .card-text {
   padding: 0 20%;
+}
+#options {
+    z-index: 100;
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+    div {
+        cursor: pointer;
+    }
 }
 </style>>

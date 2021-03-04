@@ -3,12 +3,11 @@
     <TTlogo />
     <Navbar />
     <SideLinks />
-    <Options @open="toggleModal" />
     <Form :showModal="showModal" @close="toggleModal"/>
 
     <div class="grid">
        <div class="left-half">
-
+           
        </div>
        <div class="right-half">
 
