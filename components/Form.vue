@@ -3,13 +3,14 @@
     <v-dialog
       v-model="showModal"
       persistent
-      max-width="1000px"
+      max-width="95%"
     >
       <v-card>
-        <v-card-title>
-          <span class="text-h2 font-weight-bold">CONTACT US</span>
+        <v-card-title class="d-flex justify-space-between">
+          <span class="text-h5 text-sm-h2 font-weight-bold">CONTACT</span>
+          <span class="text-h5 text-sm-h2 font-weight-bold">US</span>
         </v-card-title>
-        <v-card-text>
+        <v-card-text class="card-text">
           <v-container>
             <v-row>
               <v-col cols="12" class="pa-0">
@@ -29,6 +30,7 @@
               <v-col cols="12" class="pa-0">
                 <v-text-field
                   label="EMAIL*"
+                  type="email"
                   color="shade white"
                   required
                 ></v-text-field>
@@ -62,29 +64,23 @@
                 ></v-textarea>
               </v-col>
             </v-row>
+
+            <v-row>
+              <v-spacer cols="9" sm="11"></v-spacer>
+              <v-col cols="3" sm="1" class="pa-0 pb-10" align-self="end">
+                <v-btn
+                  color="shade white"
+                  text
+                  outlined
+                  tile
+                  @click="closeModal"
+                >
+                  SEND
+                </v-btn>
+              </v-col>
+            </v-row>
           </v-container>
         </v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn
-            color="shade white"
-            text
-            outlined
-            tile
-            @click="closeModal"
-          >
-            CLOSE
-          </v-btn>
-          <v-btn
-            color="shade white"
-            text
-            outlined
-            tile
-            @click="closeModal"
-          >
-            SEND
-          </v-btn>
-        </v-card-actions>
       </v-card>
     </v-dialog>
   </v-row>
@@ -108,5 +104,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.card-text {
+  padding: 0 20%;
+}
 </style>>
