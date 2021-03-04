@@ -28,7 +28,7 @@ export default {
     ThemeTime: function() {
       let date = new Date()
       console.log(date.getHours())
-      if (date.getHours() >= 19) {
+      if (date.getHours() >= 20 || date.getHours() <= 9) {
         setTimeout(() => this.$vuetify.theme.dark = true, 0)
       }
     }
