@@ -34,15 +34,16 @@ export default {
     },
     ChangeTheme: function() {
       var now = new Date();
-      var millisTill10 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 20, 0, 0, 0) - now;
-      if (millisTill10 < 0) {
-          millisTill10 += 86400000 + 86400000; // it's after 10am, try 10am tomorrow.
+      var millisTill20 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 20, 0, 0, 0) - now;
+      if (millisTill20 < 0) {
+          millisTill20 += 72000000;
       }
-      setTimeout(() => this.$vuetify.theme.dark = true, millisTill10)
+      setTimeout(() => this.$vuetify.theme.dark = true, millisTill20)
     }
   },
   mounted() {
     this.ThemeTime()
+    this.ChangeTheme()
   }
 }
 </script>
