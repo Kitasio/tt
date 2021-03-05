@@ -32,8 +32,17 @@ export default {
         margin-right: 15px;
         cursor: pointer;
         img {
-            width: 30px;
-            min-width: 100%;
+            width: 70%;
+            //min-width: 100%;
+        }
+    }
+}
+@media only screen and (min-width: 600px) {
+    #icons {
+        div {
+            img {
+                width: 100%;
+            }
         }
     }
 }
