@@ -42,7 +42,7 @@ export default {
     }
   },
   mounted() {
-    this.ThemeTime()
+    //this.ThemeTime()
     this.ChangeTheme()
   }
 }

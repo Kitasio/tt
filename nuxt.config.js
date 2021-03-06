@@ -36,6 +36,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    'nuxt-gsap-module',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -47,6 +48,17 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
+  gsap: {
+    /* module options */
+    extraPlugins: {
+      /**
+       * When you enable them, plugins are
+       * automatically registered and available globally
+       */
+      scrollTrigger: true
+    },
+  },
+
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
@@ -55,7 +67,7 @@ export default {
       dark: false,
       themes: {
         dark: {
-          primary: colors.blue.darken2,
+          primary: colors.shades.white,
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
           info: '#000',
@@ -64,7 +76,7 @@ export default {
           success: colors.green.accent3
         },
         light: {
-          primary: colors.blue.darken2,
+          primary: colors.shades.black,
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
           info: '#fff',

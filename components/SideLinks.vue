@@ -14,7 +14,7 @@ export default {
             icons: [
                 {name: 'tg', src: '/img/tg.svg', src_dark: '/img/tg_white.svg', width: 'width: 30px;', url: '#'},
                 {name: 'behance', src: '/img/beh.svg', src_dark: '/img/beh_white.svg', width: 'width: 43px;', url: 'https://www.behance.net/TwentyTwos'},
-                {name: 'instagram', src: '/img/ins.svg', src_dark: '/img/ins_white.svg', url: 'https://www.instagram.com/20_twos/?igshid=15n3ozy3avcw'},
+                {name: 'instagram', src: '/img/ins.svg', src_dark: '/img/ins_white.svg', width: 'width: 30px;', url: 'https://www.instagram.com/20_twos/?igshid=15n3ozy3avcw'},
             ]
         }
     },

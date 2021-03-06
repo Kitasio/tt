@@ -6,11 +6,12 @@
     >
       <template v-slot:activator="{ on, attrs }">
         <v-btn
-          text
+          tile
+          depressed
           v-bind="attrs"
           v-on="on"
           id="options"
-          class="text-subtitle-2 text-sm-h6 font-weight-light"
+          class="request text-subtitle-2 text-sm-h6 text-xl-h4 font-weight-light"
           color="shade white"
         >
         SEND REQUEST
@@ -121,10 +122,12 @@ export default {
 #options {
     z-index: 100;
     position: fixed;
+    padding: 30px;
     right: 3%;
     bottom: 3%;
     div {
         cursor: pointer;
     }
 }
+
 </style>>
