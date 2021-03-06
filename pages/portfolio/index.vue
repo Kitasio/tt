@@ -5,13 +5,17 @@
     <SideLinks />
     <Form :showModal="showModal" @close="toggleModal"/>
 
-    <div class="grid" style="margin-top: 2rem;">
-      <div class="full">
-        <li v-for="post of posts" :key="post.slug">
-          <NuxtLink :to="post.slug">{{ post.title }}</NuxtLink>
-        </li>
+
+      <div class="main-content">
+        <div v-for="post of posts" :key="post.slug">
+          <div>{{ post.title }}</div>
+          <div>{{ post.description }}</div>
+          <NuxtLink :to="post.slug">
+            <img :src="post.Thumbnail" alt="">
+          </NuxtLink>
+        </div>
       </div>
-    </div>
+
 
 </v-main>
 </template>
@@ -47,5 +51,18 @@ export default {
 
 <style lang="scss" scoped>
 @import "~/assets/main.scss";
+.main-content {
+  margin-top: 1rem;
+  img {
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 400px) {
+  .main-content {
+    margin: 5rem 13% 0 13%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
 
 </style>
