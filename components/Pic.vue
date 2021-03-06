@@ -2,7 +2,7 @@
     <v-img
       :lazy-src="lazySrc"
       :src="src"
-      max-width="100%"
+      aspect-ratio="16/9"
     >
     <template v-slot:placeholder>
         <v-row

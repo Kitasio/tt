@@ -19,23 +19,22 @@
        <div class="right-third">
          <p class="text-big d-block">project info: <span class="text-normal ml-10">A SERIES OF BOOK COVERS AND PRODUCTION VIDEO/TRAILER FOR A FAMOUS WRITER NAMED ALEXEY IVANOV FOR HIS NEW ACTION AUDIO-BOOK ABOUT TWO.</span></p>
        </div>
-        <Pic class="full mt-2 mt-sm-15" src="/img/Soldierback1.jpg?nf_resize=fit&w=2000" lazy-src="/img/Soldierback1.jpg?nf_resize=fit&w=500" />
+        <Pic class="full mt-2 mt-sm-15" src="/img/Soldierback1.jpg?nf_resize=fit&w=2000" lazy-src="/img/Soldierback1.jpg?nf_resize=fit&w=50" />
         <div class="left-half">
-          <v-lazy transition="fade-transition">
             <img style="width: 100%" src="/img/soldier.gif" alt="">
-          </v-lazy>
         </div>
         <div class="right-half">
           <div class="text-vid">
             <p class="text-normal">A SERIES OF BOOK COVERS AND PRODUCTION VIDEO/TRAILER FOR A FAMOUS WRITER NAMED ALEXEY IVANOV FOR HIS NEW ACTION AUDIO-BOOK ABOUT TWO.</p>
             <div>
-              <video autoplay muted loop id="myVideo">
-                <source src="/img/demo.mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
-              </video>
+                <video autoplay muted loop id="myVideo">
+                  <source src="/img/demo.mp4" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
             </div>
           </div>
         </div>
+
 
         <v-carousel
           class="full"
@@ -50,9 +49,8 @@
               :key="i"
               :src="item.src"
             >
-            <img class="fading-img" :src="item.fadeSrc" alt="">
+            <!-- <img class="fading-img" :src="item.fadeSrc" alt=""> -->
             </v-carousel-item>
-
           </v-carousel>
 
           <div class="full">
@@ -71,16 +69,15 @@
             </div>
           </div>
 
-          <div class="left-third">
-            <img v-for="(book, i) in booksL" :key="i" :src="book.src" style="width: 100%;"/>
-          </div>
-          <div id="text-move" class="center">
-            <p id="book-text" class="text">final audiobook covers</p>
-          </div>
-          <div class="right-third">
-            <img v-for="(book, i) in booksR" :key="i" :src="book.src" style="width: 100%;"/>
-          </div>
-          
+            <div class="left-third">
+              <img v-for="(book, i) in booksL" :key="i" :src="book.src" style="width: 100%;"/>
+            </div>
+            <div id="text-move" class="center">
+              <p id="book-text" class="text">final audiobook covers</p>
+            </div>
+            <div class="right-third">
+              <img v-for="(book, i) in booksR" :key="i" :src="book.src" style="width: 100%;"/>
+            </div>
           <div class="full">
             <div>
               <div>
@@ -172,12 +169,20 @@ export default {
           start: "top center",
           end: "bottom top",
           scrub: 1,
+          markers: true,
         },
       });
     }
   },
-  mounted() {
-    this.moveText()
+  // mounted() {
+  //   this.moveText()
+  // },
+  mounted: function () {
+    this.$nextTick(function () {
+      // Code that will run only after the
+      // entire view has been rendered
+      this.moveText()
+    })
   }
 }
 </script>

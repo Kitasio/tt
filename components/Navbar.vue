@@ -1,8 +1,10 @@
 <template>
 <v-card flat tile class="d-flex justify-space-between mt-3 px-md-5 text-md-h5 text-xl-h4">
-    <v-card @mouseenter="borderAnim1" id="links" flat tile class="font-weight-light text-uppercase">portfolio
-        <div class="navs1 line info"></div>
-    </v-card>
+    <NuxtLink to="/portfolio">
+        <v-card @mouseenter="borderAnim1" id="links" flat tile class="font-weight-light text-uppercase">portfolio
+            <div class="navs1 line info"></div>
+        </v-card>
+    </NuxtLink>
     <v-card @mouseenter="borderAnim2" id="links" flat tile class="font-weight-light text-uppercase">courses
         <div class="navs2 line info"></div>
     </v-card>
