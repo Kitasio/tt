@@ -5,20 +5,14 @@
     <SideLinks />
     <Form :showModal="showModal" @close="toggleModal"/>
 
-
       <div class="main-content">
-        <div v-for="project of projects" :key="project.slug">
-          <div>{{ project.title }}</div>
-          <div>{{ project.description }}</div>
+        <div v-for="project in projects" :key="project.slug">
           <NuxtLink :to="project.slug">
             <img :src="project.Thumbnail" alt="">
-          </NuxtLink>
+          </NuxtLink> 
         </div>
       </div>
 
-      <li v-for="post of posts" :key="post.slug">
-        <NuxtLink :to="post.slug">{{ post.title }}</NuxtLink>
-      </li>
 
 
 </v-main>
@@ -34,7 +28,6 @@ import Form from '~/components/Form'
 export default {
   async asyncData({ $content }) {
     const projects = await $content("project").fetch();
-
     return {
       projects,
     };
