@@ -1,11 +1,13 @@
 <template>
-  <v-main>
     <div>
-      <div style="height: 100vh;" v-for="i in project" :key="i.slug">
+      <nuxt-content :document="project" />
+      <h2 v-for="p in project" :key="p.slug">{{ p.link }}</h2>
+      helllooo
+      <!-- <div style="height: 100vh;" v-for="i in project" :key="i.slug">
+        {{ i.link }}
         <iframe :src="i.link" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" width="100%" height="800px" frameborder="0" seamless></iframe>
-      </div>
+      </div> -->
     </div>
-  </v-main>
 </template>
 
 <script>
