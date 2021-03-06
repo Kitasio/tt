@@ -4,7 +4,15 @@
     <Navbar />
     <SideLinks />
     <Form :showModal="showModal" @close="toggleModal"/>
-    <NuxtLink to="/portfolio/xor"><div>xor</div></NuxtLink>
+
+    <div class="grid" style="margin-top: 2rem;">
+      <div class="full">
+        <li v-for="post of posts" :key="post.slug">
+          <NuxtLink :to="post.slug">{{ post.title }}</NuxtLink>
+        </li>
+      </div>
+    </div>
+
 </v-main>
 </template>
 
@@ -16,6 +24,13 @@ import Pic from '~/components/Pic.vue'
 import Form from '~/components/Form'
 
 export default {
+  async asyncData({ $content }) {
+    const posts = await $content("blog").fetch();
+
+    return {
+      posts,
+    };
+  },
   components: { Navbar, TTlogo, SideLinks, Pic, Form },
   data() {
     return {
@@ -30,6 +45,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "~/assets/main.scss";
 
 </style>
