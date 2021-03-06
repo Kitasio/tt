@@ -30,7 +30,7 @@
             <p class="text-normal">A SERIES OF BOOK COVERS AND PRODUCTION VIDEO/TRAILER FOR A FAMOUS WRITER NAMED ALEXEY IVANOV FOR HIS NEW ACTION AUDIO-BOOK ABOUT TWO.</p>
             <div>
               <video autoplay muted loop id="myVideo">
-                <source src="img/demo.mp4" type="video/mp4">
+                <source src="/img/demo.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
               </video>
             </div>
