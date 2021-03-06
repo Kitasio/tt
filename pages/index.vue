@@ -24,6 +24,11 @@ import Pic from '~/components/Pic.vue'
 import Form from '~/components/Form'
 
 export default {
+  head() {
+    return {
+      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
+    };
+  },
   components: { Navbar, TTlogo, SideLinks, Pic, Form },
   data() {
     return {
