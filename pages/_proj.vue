@@ -11,7 +11,7 @@ export default {
   async asyncData({ $content, params, error }) {
     let project;
     try {
-      post = await $content("project", params.slug).fetch();
+      project = await $content("project", params.slug).fetch();
       // OR const article = await $content(`articles/${params.slug}`).fetch()
     } catch (e) {
       error({ message: "Project not found" });
