@@ -42,8 +42,8 @@ export default {
     }
   },
   mounted() {
-    //this.ThemeTime()
-    this.ChangeTheme()
+    // this.ThemeTime()
+    // this.ChangeTheme()
   }
 }
 </script>
@@ -51,6 +51,9 @@ export default {
 <style lang="scss">
 .layout {
   padding: .7rem
+}
+a {
+  text-decoration: none;
 }
 @media screen and (min-width: 960px) {
   .layout {

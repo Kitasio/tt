@@ -7,11 +7,11 @@
 
 
       <div class="main-content">
-        <div v-for="post of posts" :key="post.slug">
-          <div>{{ post.title }}</div>
-          <div>{{ post.description }}</div>
-          <NuxtLink :to="post.slug">
-            <img :src="post.Thumbnail" alt="">
+        <div v-for="project of projects" :key="project.slug">
+          <div>{{ project.title }}</div>
+          <div>{{ project.description }}</div>
+          <NuxtLink :to="project.slug">
+            <img :src="project.Thumbnail" alt="">
           </NuxtLink>
         </div>
       </div>
@@ -29,10 +29,10 @@ import Form from '~/components/Form'
 
 export default {
   async asyncData({ $content }) {
-    const posts = await $content("blog").fetch();
+    const projects = await $content("project").fetch();
 
     return {
-      posts,
+      projects,
     };
   },
   components: { Navbar, TTlogo, SideLinks, Pic, Form },
