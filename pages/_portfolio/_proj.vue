@@ -12,7 +12,8 @@ export default {
   async asyncData({ $content, params, error }) {
     let project;
     try {
-      project = await $content("project", params.slug).fetch();
+      // project = await $content("project", params.slug).fetch();
+      project = await $content(`project/${params.proj}`).fetch()
     } catch (e) {
       error({ message: "Blog project not found" });
     }

@@ -7,7 +7,7 @@
 
       <div class="main-content">
         <div v-for="project in projects" :key="project.slug">
-          <NuxtLink :to="`/${project.slug}`">
+          <NuxtLink :to="`/portfolio/${project.slug}`">
             <img :src="project.Thumbnail" alt="">
           </NuxtLink> 
         </div>
@@ -28,9 +28,7 @@ import Form from '~/components/Form'
 export default {
   async asyncData({ $content }) {
     const projects = await $content("project").fetch();
-    return {
-      projects,
-    };
+    return { projects };
   },
   components: { Navbar, TTlogo, SideLinks, Pic, Form },
   data() {
