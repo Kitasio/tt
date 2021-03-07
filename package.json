@@ -12,7 +12,8 @@
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/axios": "^5.12.5",
     "core-js": "^3.8.3",
-    "nuxt": "^2.14.12"
+    "nuxt": "^2.14.12",
+    "telegram-bot-api": "^2.0.1"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.3",

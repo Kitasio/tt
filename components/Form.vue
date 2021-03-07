@@ -30,15 +30,7 @@
                   label="NAME*"
                   color="shade white"
                   required
-                  v-model="firstName"
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12" class="pa-0">
-                <v-text-field
-                  label="LASTNAME*"
-                  color="shade white"
-                  required
-                  v-model="lastName"
+                  v-model="name"
                 ></v-text-field>
               </v-col>
               <v-col cols="12" class="pa-0">
@@ -46,6 +38,7 @@
                   label="PHONE NUMBER*"
                   color="shade white"
                   required
+                  v-model="number"
                 ></v-text-field>
               </v-col>
               <v-col cols="12" class="pa-0">
@@ -62,6 +55,7 @@
                   label="TELL US ABOUT YOUR COMPANY"
                   color="shade white"
                   rows="1"
+                  v-model="tell_us"
                 ></v-textarea>
               </v-col>
               <v-col cols="12" class="pa-0">
@@ -69,6 +63,7 @@
                   label="DESCRIBE YOUR REQUEST"
                   color="shade white"
                   rows="1"
+                  v-model="describe_request"
                 ></v-textarea>
               </v-col>
               <v-col cols="12" class="pa-0">
@@ -76,6 +71,7 @@
                   label="APPROXIMATE BUDGET"
                   color="shade white"
                   rows="1"
+                  v-model="budget"
                 ></v-textarea>
               </v-col>
               <v-col cols="12" class="pa-0">
@@ -83,6 +79,7 @@
                   label="APPROXIMATE DATES"
                   color="shade white"
                   rows="1"
+                  v-model="dates"
                 ></v-textarea>
               </v-col>
             </v-row>
@@ -96,7 +93,7 @@
                   outlined
                   type="submit"
                   tile
-                  @click="send"
+                  @click="tgMessage"
                 >
                   SEND
                 </v-btn>
@@ -116,9 +113,13 @@ export default {
     data() {
         return{
             dialog: false,
-            firstName: '',
-            lastName: '',
+            name: '',
+            number: '',
             email: '',
+            tell_us: '',
+            describe_request: '',
+            budget: '',
+            dates: '',
         }
     },
     methods: {
@@ -140,7 +141,30 @@ export default {
           }).catch(() => {
               console.log('fetch error')
           })
-        }
+        },
+        tgMessage: function() {
+          this.dialog = false
+          let data = {
+            name: this.name,
+            number: this.number,
+            email: this.email,
+            tell_us: this.tell_us,
+            describe_request: this.describe_request,
+            budget: this.budget,
+            dates: this.dates,
+          }
+          fetch('/.netlify/functions/tgMessage/tgMessage.js', {
+              headers: {
+                  "content-type": "application/json"
+                  },
+              method: "POST",
+              body: JSON.stringify(data)
+          }).then(() => {
+              console.log('fetch then')
+          }).catch(() => {
+              console.log('fetch error')
+          })
+        },
     }
 }
 </script>
