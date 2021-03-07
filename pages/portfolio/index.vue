@@ -7,9 +7,6 @@
 
       <div class="main-content">
         <div v-for="project in projects" :key="project.slug">
-          <!-- <a :href="project.slug">
-
-          </a> -->
           <NuxtLink :to="`/${project.slug}`">
             <img :src="project.Thumbnail" alt="">
           </NuxtLink> 
