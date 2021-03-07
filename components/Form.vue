@@ -30,6 +30,15 @@
                   label="NAME*"
                   color="shade white"
                   required
+                  v-model="firstName"
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12" class="pa-0">
+                <v-text-field
+                  label="LASTNAME*"
+                  color="shade white"
+                  required
+                  v-model="lastName"
                 ></v-text-field>
               </v-col>
               <v-col cols="12" class="pa-0">
@@ -45,6 +54,7 @@
                   type="email"
                   color="shade white"
                   required
+                  v-model="email"
                 ></v-text-field>
               </v-col>
               <v-col cols="12" class="pa-0">
@@ -84,8 +94,9 @@
                   color="shade white"
                   text
                   outlined
+                  type="submit"
                   tile
-                  @click="dialog = false"
+                  @click="send"
                 >
                   SEND
                 </v-btn>
@@ -104,12 +115,31 @@ export default {
     props: ['showModal'],
     data() {
         return{
-            dialog: false
+            dialog: false,
+            firstName: '',
+            lastName: '',
+            email: '',
         }
     },
     methods: {
         closeModal: function() {
             this.$emit('close')
+        },
+        send: function() {
+          console.log(this.firstName, this.lastName, this.email)
+          this.dialog = false
+          let data = {firstName: this.firstName, lastName: this.lastName, email: this.email}
+          fetch('/.netlify/functions/send', {
+              headers: {
+                  "content-type": "application/json"
+                  },
+              method: "POST",
+              body: JSON.stringify(data)
+          }).then(() => {
+              console.log('fetch then')
+          }).catch(() => {
+              console.log('fetch error')
+          })
         }
     }
 }
