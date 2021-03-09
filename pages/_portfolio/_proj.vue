@@ -1,6 +1,6 @@
 <template>
   <v-main>
-    <div>
+    <div style="height: 100vh;">
       <iframe :src="project.link" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" width="100%" height="800px" frameborder="0" seamless></iframe>
       <nuxt-content :document="project" />
     </div>
