@@ -8,7 +8,7 @@
       <div class="main-content">
         <div v-for="project in projects" :key="project.slug">
           <NuxtLink :to="`/portfolio/${project.slug}`">
-            <img :src="`${project.Thumbnail}?nf_resize=smartcrop&w=400&h=400`" alt="">
+            <v-img class="img" :aspect-ratio="16/9" :src="`${project.Thumbnail}?nf_resize=smartcrop&w=400&h=400`" alt=""></v-img>
           </NuxtLink> 
         </div>
       </div>
@@ -47,9 +47,13 @@ export default {
 <style lang="scss" scoped>
 @import "~/assets/main.scss";
 .main-content {
-  margin-top: 1rem;
-  img {
-    max-width: 100%;
+  margin: 3rem 0 3rem 0;
+  .v-image__image--cover {
+    transition: background-size 2s;
+  }
+  .v-image__image--cover:hover {
+    //transform: scale(1.5);
+    background-size: 150% 150%;
   }
 }
 @media only screen and (min-width: 400px) {

@@ -50,7 +50,7 @@ export default {
 
 <style lang="scss">
 .layout {
-  padding: .7rem
+  margin: .7rem;
 }
 a {
   text-decoration: none;

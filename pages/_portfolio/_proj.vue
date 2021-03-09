@@ -21,5 +21,6 @@ export default {
       project,
     };
   },
+  layout: "empty",
 };
 </script>
