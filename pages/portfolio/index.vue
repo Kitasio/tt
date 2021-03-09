@@ -8,7 +8,7 @@
       <div class="main-content">
         <div v-for="project in projects" :key="project.slug">
           <NuxtLink :to="`/portfolio/${project.slug}`">
-            <img :src="`${project.Thumbnail}?nf_resize=fit&w=2000`" alt="">
+            <img :src="`${project.Thumbnail}?nf_resize=smartcrop&w=400&h=400`" alt="">
           </NuxtLink> 
         </div>
       </div>
