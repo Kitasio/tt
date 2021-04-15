@@ -60,7 +60,14 @@ export default {
   .main-content {
     margin: 5rem 13% 0 13%;
     display: grid;
+    gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+  .img {
+    transition: ease .5s; 
+  }
+  .img:hover {
+    margin: .3rem;
   }
 }
 

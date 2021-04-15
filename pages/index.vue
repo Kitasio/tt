@@ -5,14 +5,6 @@
     <SideLinks />
     <Form :showModal="showModal" @close="toggleModal"/>
 
-    <div class="grid">
-       <div class="left-half">
-           
-       </div>
-       <div class="right-half">
-
-       </div>
-    </div>
   </v-main>
 </template>
 
@@ -23,6 +15,8 @@ import SideLinks from '~/components/SideLinks.vue'
 import Pic from '~/components/Pic.vue'
 import Form from '~/components/Form'
 
+
+
 export default {
   head() {
     return {
@@ -32,13 +26,13 @@ export default {
   components: { Navbar, TTlogo, SideLinks, Pic, Form },
   data() {
     return {
-      showModal: false
+      showModal: false,
     }
   },
   methods: {
     toggleModal: function() {
       this.showModal = !this.showModal
-    }
+    },
   }
 }
 </script>
@@ -46,6 +40,9 @@ export default {
 <style lang="scss" scoped>
 @import "~/assets/main.scss";
 
+.custom-main-text {
+  line-height: 125%;
+}
 
 .left-half {
     @include left-child;
@@ -53,4 +50,4 @@ export default {
 .right-half {
     @include right-child;
 }
-</style>>
+</style>

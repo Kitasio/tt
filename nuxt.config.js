@@ -57,7 +57,8 @@ export default {
        * When you enable them, plugins are
        * automatically registered and available globally
        */
-      scrollTrigger: true
+      scrollTrigger: true,
+      text: true
     },
   },
 

@@ -5,12 +5,14 @@
             <div class="navs1 line info"></div>
         </v-card>
     </NuxtLink>
-    <v-card @mouseenter="borderAnim2" id="links" flat tile class="font-weight-light text-uppercase">courses
+    <!-- <v-card @mouseenter="borderAnim2" id="links" flat tile class="font-weight-light text-uppercase">courses
         <div class="navs2 line info"></div>
-    </v-card>
+    </v-card> -->
+    <NuxtLink to="/about">
     <v-card @mouseenter="borderAnim3" id="links" flat tile class="font-weight-light text-uppercase">about us
         <div class="navs3 line info"></div>
     </v-card>
+    </NuxtLink>
 </v-card>
 </template>
 

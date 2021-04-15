@@ -4319,10 +4319,10 @@ gray-matter@^4.0.2:
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
 
-gsap@^3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.6.0.tgz#925f25370c698ce0f6ea563522da8f6b5ed21b0a"
-  integrity sha512-0P3syv1TmYr+A/VZ8UMFzw+s0XoaKSzzDFs8NqkXiJTXI4E/VTi0zRjPgxaPBpiUPPycgRnFjLDe0Tb4dRRf+w==
+gsap@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.6.1.tgz#618f2338044d2b78b8cbced8ea8bf246d1cf6407"
+  integrity sha512-hCkjk7UVbeEmlpFbiy7lIsh742bwVlMhdCnnQ1CvVOAdURyPX8hXjFZGh/0YzUyAcWPyJPE0/paMhSYtLhGlfA==
 
 gzip-size@^6.0.0:
   version "6.0.0"
@@ -6157,12 +6157,12 @@ num2fraction@^1.2.2:
   resolved "https://registry.yarnpkg.com/num2fraction/-/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
   integrity sha1-b2gragJ6Tp3fpFZM0lidHU5mnt4=
 
-nuxt-gsap-module@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/nuxt-gsap-module/-/nuxt-gsap-module-1.2.1.tgz#857252fc4236dd44840e20eab6decb350d7d5add"
-  integrity sha512-505guSKGTHkDjRb6MM3JLjnbefLa80lhcx8coSUvwPenNjU5V3CzMRsNmpk+2nrEkfIyPjuRZfBaMXlLwsnWfQ==
+nuxt-gsap-module@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/nuxt-gsap-module/-/nuxt-gsap-module-1.3.1.tgz#da239b8d536ebd0df6c23fd5f01f694dbfa93ca7"
+  integrity sha512-vbEIm/+KtXz4H5v+G+P6MDTh+ORS2cdITXxfcaq97IsW6anJiK0l9CJnB1gZQhXyDQW9uzdKzGvjOA5JJQftUQ==
   dependencies:
-    gsap "^3.6.0"
+    gsap "^3.6.1"
 
 nuxt@^2.14.12:
   version "2.15.1"
